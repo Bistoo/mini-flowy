@@ -1,0 +1,196 @@
+html, body, li {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+	color: #282828;
+	min-width: 230px;
+	max-width: 700px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
+	overflow-y: scroll;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(37, 37, 37);
+}
+
+:focus {
+	outline: 0;
+}
+
+.todoapp {
+	margin: 70px 0;
+}
+
+ul {
+	list-style: none;
+}
+
+.help {
+  float:right;
+  width: 300px;
+  min-height: 200px;
+  position: absolute;
+  top: 70px;
+  right: 30px;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(37, 37, 37);
+}
+
+li .input-text {
+	padding: 1px 0px 0px 0px;
+	height: 27px;
+	border: white;
+	width: 80%;
+  font-size: 14px;
+  font-weight: 300;
+} 
+
+li.completed > .input-text {
+	color: #d9d9d9;
+}
+
+/* TOGGLE CHECKBOX*/
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 0px;
+	margin-bottom: 0px;
+	width: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  height: 6px;
+  width: 6px;
+	background-color: rgb(37, 37, 37);
+	border-radius: 50%;
+}
+
+.container input:checked ~ .checkmark {
+	background-color: rgb(255, 255, 255);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 2px;
+  top: -2px;
+  width: 4px;
+  height: 7px;
+  border: solid #d9d9d9;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* TOGGLE SWITCH*/
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 26px;
+  height: 15px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch .text-switch {
+  width: 150px;
+  margin-left: 25px;
+  margin-top: 1px;
+  position: absolute;
+  float: left;
+}
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(94, 172, 104);
+}
+
+/* input:focus + .slider {
+  box-shadow: 0 0 0px rgb(0, 0, 0);
+} */
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(11px);
+  -ms-transform: translateX(11px);
+  transform: translateX(11px);
+}
+
+/* Rounded sliders */
+/* .slider.round {
+  border-radius: 14px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+} */

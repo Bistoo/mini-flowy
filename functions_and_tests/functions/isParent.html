@@ -1,0 +1,79 @@
+<script src="../tinytest.js"></script>
+<script>
+// FUNCTION
+//  isParent returns true if index2 passed in is related to index1
+
+// RETURN VALUE
+//  It should return true or false
+//
+
+// SIGNATURE
+//  isParent(index1, index2);
+
+// PROTOTYPE
+//   function isParent(array, index1, index2) {
+//     if (array[index2].parent !== null) {
+//       if (array[index1].id === array[index2].parent) {
+//         return true;
+//       } else {
+//         isParent(array, index1, getIndexFromId(array, array[index2].parent));
+//       }
+//     } else if (array[index2].parent === null) {
+//       return false;
+//     }
+//   }
+//
+
+function getIndexFromId(array, id){
+	return array.findIndex(function(todo) {
+		return todo.id === id;
+	});
+}
+
+function isParent(array, index1, index2) {
+  var result;
+  if (array[index2].parent !== null) {
+    if (array[index1].id === array[index2].parent) {
+      return true;
+    } else {
+      var parentIndex = getIndexFromId(array, array[index2].parent);
+      result = isParent(array, index1, parentIndex);
+      if (result) {
+        return result;
+      }
+    }
+  } else if (array[index2].parent === null) {
+    return false;
+  }
+  return result;
+}
+
+tests({
+
+  'It should return false if object 2 is not a child of object 1': function() {
+    var array = [{id: 0, parent: null}, {id: 1, parent: null}];
+    var isParentResult = isParent(array, 0, 1);
+    eq(isParentResult, false);
+  },
+
+  'It should return true if object 2 is a child of object 1': function() {
+    var array = [{id: 0, parent: null}, {id: 1, parent: 0}];
+    var isParentResult = isParent(array, 0, 1);
+    eq(isParentResult, true);
+  },
+
+  'It should return false if object 2 is not a grandchild of object 1': function() {
+    var array = [{id: 0, parent: null}, {id: 1, parent: 0}, {id: 2, parent: null}, {id: 3, parent: 2}];
+    var isParentResult = isParent(array, 0, 3);
+    eq(isParentResult, false);
+  },
+
+  'It should return true if object 2 is a grandchild of object 1': function() {
+    var array = [{id: 0, parent: null}, {id: 1, parent: 0}, {id: 2, parent: 1}];
+    var isParentResult = isParent(array, 0, 2);
+    eq(isParentResult, true);
+  }
+
+});
+
+</script>

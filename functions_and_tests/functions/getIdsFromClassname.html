@@ -1,0 +1,40 @@
+<script src="../tinytest.js"></script>
+<script>
+
+// FUNCTION
+//  the function updates the indexing of an array of objects according to the indexing
+//  of another array, the order in a DOM collection in that case
+//
+// RETURN VALUE
+//  returns an array of ids from a DOM classname, if it has an id
+//  returns an array of elementToReturn from a DOM classname
+//
+// SIGNATURE
+//  getIdsFromClassname (classname)
+//
+// EXAMPLES
+//  getIdsFromClassname ('input-text');
+//		
+// PROTOTYPE
+//  function getIdsFromClassname () {}
+//    var domCollection = document.getElementsByClassName('input-text');
+//    var idArray = [];
+//    for (var i = 0; i < domCollection.length ; i++) {
+// 	    idArray.push({
+// 		    id: domCollection[i].id
+// 	    })
+//    };
+//    return idArray;
+//
+
+function getIdsFromClassname (classname) {
+  var domCollection = document.getElementsByClassName(classname);
+  var idArray = [];
+  for (var i = 0; i < domCollection.length ; i++) {
+	  idArray.push(domCollection[i].id)
+  };
+  return idArray;
+}
+
+
+</script>
