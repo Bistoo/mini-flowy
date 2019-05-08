@@ -21,3 +21,4 @@ A minimal version of a nested todo list focusing on usability. Basic functions: 
 
 * Command + Enter: Toggle line
 ```
+![screenshot](screenshot.png)
