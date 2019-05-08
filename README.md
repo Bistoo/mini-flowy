@@ -2,22 +2,22 @@
 A minimal version of a nested todo list focusing on usability. Basic functions: create/delete,  move up/down, indent/undindent, move up/down lines, check/uncheck todos. See below for shortcuts.
 
 ## shortcuts
+```
+* Enter: Create
 
-**Enter**: Create
+* Delete or Backspace: Delete
 
-**Delete** or Backspace: Delete
+* Down: Previous line
 
-**Down**: Previous line
+* Up: Next line
 
-**Up**: Next line
+* Tab: Indent
 
-**Tab**: Indent
+* Shift + Tab: Unindent
 
-**Shift** + **Tab**: Unindent
+* Shift + Up: Move line up
 
-**Shift** + **Up**: Move line up
+* Shift + Down: Move line down
 
-**Shift** + **Down**: Move line down
-
-**Command** + **Enter**: Toggle line
-
+* Command + Enter: Toggle line
+```
