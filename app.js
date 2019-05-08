@@ -312,14 +312,6 @@ var dom = {
 			}
 		}.bind(this));
 
-		// document.querySelector('.switch').addEventListener('change', function(e){
-		// 	if (e.target.className === 'switch-textbox'){
-		// 		var id = e.target.closest("li").getAttribute("data-id");
-		// 		var index = help.getIndexFromId(data.todos, id);
-		// 		data.toggle(index);
-		// 	}
-		// }.bind(this));
-
 		document.querySelector('.todo-list').addEventListener('keydown', function(e){
 			this.editKeydown(e);
 		}.bind(this));
