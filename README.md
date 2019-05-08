@@ -1,7 +1,7 @@
 # mini-flowy
-A minimal version of a nested todo list.
+A minimal version of a nested todo list focusing on usability. Basic functions: create/delete, check/uncheck, indent/undindent, move up/dpwn todos. See below for shortcuts.
 
-# Shortcuts
+# shortcuts
 
 Enter: Create
 
