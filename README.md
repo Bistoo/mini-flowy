@@ -1,6 +1,7 @@
 # mini-flowy
+A minimal version of a nested todo list.
 
-Shortcuts
+# Shortcuts
 
 Enter: Create
 
