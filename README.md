@@ -2,7 +2,7 @@
 A minimal version of a nested todo list focusing on usability. Basic functions: create/delete, check/uncheck, indent/undindent, move up/down todos. See below for shortcuts.
 
 ## shortcuts
-'''
+```
 Enter: Create
 
 Delete or Backspace: Delete
