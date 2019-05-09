@@ -21,7 +21,7 @@ Shift + Up: Move line up
 
 Shift + Down: Move line down
 
-Command + Enter: Toggle line
+Command + Enter or Mouse click: Toggle line 
 ```
 ## what it looks like
 
